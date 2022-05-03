@@ -1,3 +1,4 @@
+// Создаем видеоплеер в модальном окне
 export default class VideoPlayer {
     constructor(triggers, overlay) {
         this.btns = document.querySelectorAll(triggers);
