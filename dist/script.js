@@ -5645,13 +5645,15 @@ function () {
   _createClass(ShowInfo, [{
     key: "init",
     value: function init() {
-      this.btns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var sibling = btn.closest('.module__info-show').nextElementSibling;
-          sibling.classList.toggle('msg');
-          sibling.style.marginTop = '20px';
+      try {
+        this.btns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var sibling = btn.closest('.module__info-show').nextElementSibling;
+            sibling.classList.toggle('msg');
+            sibling.style.marginTop = '20px';
+          });
         });
-      });
+      } catch (e) {}
     }
   }]);
 
